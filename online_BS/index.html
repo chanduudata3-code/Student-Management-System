@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest | Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">📚 BookNest</div>
+    <p>Every book has a story. Find yours.</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#catalog">Explore Books</a>
+    <a href="#wishlist">My Wishlist ❤️</a>
+</nav>
+
+<section class="hero" id="home">
+    <h1>Find Your Next Favourite Story</h1>
+    <p>Love, friendship, mythology, comedy and everything in between.</p>
+</section>
+
+<main>
+    <section id="catalog">
+        <div class="section-heading">
+            <div>
+                <h2>Explore Our Collection 📖</h2>
+                <p>Discover stories from different worlds.</p>
+            </div>
+            <span id="totalBooks">40 Books</span>
+        </div>
+
+        <div class="filters">
+            <input type="text" id="search"
+                placeholder="🔍 Search title, author or book..."
+                oninput="displayBooks()">
+
+            <select id="genreFilter" onchange="displayBooks()">
+                <option value="">All Genres</option>
+            </select>
+
+            <select id="languageFilter" onchange="displayBooks()">
+                <option value="">All Languages</option>
+            </select>
+
+            <select id="authorFilter" onchange="displayBooks()">
+                <option value="">All Authors</option>
+            </select>
+        </div>
+
+        <div id="bookList"></div>
+    </section>
+
+    <section id="wishlist">
+        <h2>My Wishlist ❤️</h2>
+        <p id="wishlistCount">0 / 10 books</p>
+        <p id="warning"></p>
+        <div id="wishlistList" class="book-grid"></div>
+    </section>
+</main>
+
+<footer>
+    <h3>📚 BookNest</h3>
+    <p>Read More. Imagine More. Discover More.</p>
+    <p>© 2026 BookNest Online Bookstore</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
